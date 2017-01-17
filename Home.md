@@ -1,7 +1,7 @@
 Welcome to the **Blendyn** wiki!  
 
 - - - 
-[![blendyn logo][blendyn-logo-big]][blendyn-logo-big]
+[![blendyn logo][blendynlogobig]][blendynlogobig]
 - - - 
 
 **Blendyn** is a postprocessing tool that helps creating 3D animations from 
@@ -138,5 +138,5 @@ The Projects has been Renamed **Blendyn** and given a sleek new logo!
 
   [1]: https://www.blender.org/
   [2]: https://www.mbdyn.org/
-  [blendyn-logo-big]: images/blendyn_logo_subtitle_big.png "Blendyn: power MBDyn
+  [blendynlogobig]: images/blendyn_logo_subtitle_big.png "Blendyn: power MBDyn
   with blender graphics; power blender with MBDyn physics!"
