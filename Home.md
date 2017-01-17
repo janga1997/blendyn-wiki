@@ -1,9 +1,7 @@
 Welcome to the **Blendyn** wiki!  
-
-- - - 
+- - -
 [![blendyn logo][logo]][logo]
-- - - 
-
+- - -
 **Blendyn** is a postprocessing tool that helps creating 3D animations from 
 multibody simulation result files.
 
