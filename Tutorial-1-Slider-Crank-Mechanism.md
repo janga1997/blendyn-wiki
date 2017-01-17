@@ -107,11 +107,24 @@ It's time to simulate the [MBDyn][1] model and import the simulation results in
 You can find the original [MBDyn][1] model [here][2]. To take into account the
 inertial properties that we have estimated and to facilitate the visualization
 in [Blender][6], you can use the slightly modified file `slidercrank.mbd`
-that you can find in the `test` directory of the repository. After running
-the simulation and following the steps in the above sections, choosing to
-automatically import all the nodes to the [Blender][6] scene, you should end up
-with a scene similar to the one in the picture below, when viewed from the
-positive *z*-axis:
+that you can find in the `test` directory of the repository. 
+
+To speed up the import of the results and enable additional features (like
+plotting), you can uncomment the
+```
+output results: netcdf;
+```
+line in the `control data` section of the input file. See the [installation
+instruction](https://github.com/zanoni-mbdyn/blendyn/wiki/Installation#optional-packages)
+for optional packages for the details.
+
+After running the simulation and following the steps in the above sections,
+choose to automatically import all the nodes to the [Blender][6] scene by
+clicking on `Add nodes to scene` button in the scene properties panel.
+Simplified representations for joints can be added also, by selecting them in
+the `MBDyn elements list` in the scene properties panel and click on `Add
+element to the scene`, for example. You should end up with a scene similar to
+the one in the picture below, when viewed from the positive *z*-axis:
 
 ---
 [![Blender scene after automatic import][aimp]][aimp]
