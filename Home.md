@@ -1,6 +1,6 @@
 Welcome to the **Blendyn** wiki!  
 
-![Blendyn: power MBDyn with blender graphics; power blender with MBDyn physics!](images/blendyn_logo_subtitle_big.png)
+![Blendyn](images/blendyn_logo_subtitle_big.png)
 
 **Blendyn** is a postprocessing tool that helps creating 3D animations from 
 multibody simulation result files.
