@@ -3,11 +3,14 @@ The basic installation of the add-on is very simple. Download the repository as 
 `.zip` file using the **Download ZIP** button at the top right of the repository
 [main page](https://github.com/zanoni-mbdyn/blendyn/). 
 
+You can also choose to download the official releases 
+[here](https://github.com/zanoni-mbdyn/blendyn/releases). Just please make sure to 
+download the `.zip` version of the source code and to **rename** the file `blendyn-master.zip`
+**before** installing the add-on.
+
 > NOTE: please check that the current active branch is "master", unless you are
 > an MBDyn developer or, in general, have access to the bleeding edge MBDyn's 
-> repository. The "testing" version of this addon might be unstable or even rely
-> on MBDyn features that are not already committed to the current public
-> release.
+> repository.
 
 In [Blender](http://www.blender.org/), go to `File -> User Preferences -> Add-ons`
 and then click on the `Install from File...` button and locate the `.zip` file
