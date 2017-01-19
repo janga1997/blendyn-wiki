@@ -53,6 +53,8 @@ Changes with respect to **mbdyn-blender** version [1.4.0]
 - Support for Eigenanalysis results visualization
 - Support for revolute hinge, revolute pin, cardano hinge, cardano pin, clamp,
   spherical hinge, spherical pin, total joint, total pint joint elements
+- Support for basic rigid body visualization (CG)
+- Support for external structural forces and couples visualization
 - Plotting of variables autospectra
 
 ### Changed
