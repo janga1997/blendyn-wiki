@@ -4,7 +4,9 @@
 *NOTE: This tutorial was realized using an older version of the mbdyn-blender
 (Blendyn predecessor) add-on.  Thus, part of if might be outdated now and some
 commands might have slightly changed. It will be updated soon, but in the
-meantime, I'm confident that you can find your way through the different bits!*
+meantime, we're confident that you can find your way through the different bits! 
+If you have troubles, please use the 
+[Issues](https://github.com/zanoni-mbdyn/blendyn/issues) section to let us now.*
 - - - 
 
 ## TUTORIAL 1. Rigid Crank Slider.
