@@ -48,7 +48,7 @@ needed to enable the plotting of [MBDyn](https://www.mbdyn.org/) from the
 [Blender](https://www.blender.org) interface.
 
 ## Linux
-### Fedora 22 and 23
+### Fedora 23, 24 and 25
 Just install Blender from the repos (This is **important**, as the Blender
 version from the repos will work with the *system* version of Python, and does
 not come with a bundled python distribution) and install the python packages needed to
