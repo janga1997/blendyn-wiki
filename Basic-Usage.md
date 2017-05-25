@@ -32,7 +32,16 @@ the info panel will remain null.
 ## Step 2: Load the .log file
 Once the basename and the path of the simulation output files has been set by
 the selection of the `.mov` or `.nc` file, the `.log` file can be loaded by
-pressing the `Load .log file` button in the panel. An message should appear in
+pressing the `Load .log file` button in the panel. 
+
+If the number of nodes has changed in the `.log` file, or if you are loading a 
+`.log` file corresponding to a different [MBDyn][1] simulation  (Which will generate the warning
+ "Some of the nodes/elements are missing in the new .log file"), you can choose to Hide/
+Delete/Do_Nothing objects present in the scene (which correspond to the old nodes), through the 
+`Missing nodes/elements` toggle below the `Load .log file` button. Go ahead and load the log file
+by pressing the `Load .log file`.
+
+An message should appear in
 the [Blender][2] toolbar at the top, informing the user that all the
 [MBDyn][1] entities have been imported correctly. The number
 of nodes and number of time steps is now displayed in the panel above the `Load
@@ -137,16 +146,23 @@ will trigger the addition of keyframes and the update of the position and
 orientation of each Blender object that is associated with an
 [MBDyn][1] node or
 element, according to the simulation outputs contained in the loaded `.mov`
-file. As an option, the user can select to animate the scene only once every *n*
-timesteps, where *n* is an integer set with the "frequency" slider found after
-the button. The `Simulation time` slider shows the time of the simulation
+file.
+As an option, the user can select to animate the scene only once every *n*
+timesteps, where *n* is a number set with the "frequency" slider found after
+the button. When *n* is not an integer, the coordinates/angles are calculated
+with a linear interpolation of the nearest timesteps.
+
+You can select the start and the end time of the animation(in seconds), thereby 
+animating only a slice of the total results. You can set them in the `Start Time` and
+`End Time` sliders, under the section "Time Range of import".
+
+The `Simulation time` slider shows the time of the simulation
 corresponding to the current animation frame. 
 
 You do not need to repeat the process every time you simulate your
 model. You can do what follows:
-* eliminate the keyframes of the current animation, by
-going to the `Dope Sheet` context area, selecting all the keyframes with the
-`A` button and pressing `X`;
+* Keyframes of the previous simulation are automatically removed whenever you import
+a new results file, or when you press the `Animate scene` button.
 * load a new results file, with the `Load results file` button;
 * press the `Animate scene` button again.
 
@@ -154,6 +170,32 @@ In the case your model has changed considerably, but you want to keep the
 Blender object in the current `.blend` file intact, you can press the `CLEAR
 MBDYN DATA` button and start from scratch. This will wipe all the data that 
 was read from the [MBDyn][1] output.
+
+## Logging
+A lot of Error/Warning/Info messages are generated in Blendyn to give the user feedback,
+and help debug a possible problem.
+To let the user keep track of all the report messages generated, a `.bylog` file is created
+in the same directory as the results files.
+The same file is also created in the Text Editor buffer in Blender, which you can view by switching
+to the Text Editor context.
+
+This is how the log messages look.
+
+`
+05/26/2017 04:29:24 PM - INFO - MBDyn entities imported successfully
+05/26/2017 04:29:25 PM - WARNING - MBDyn labels file provided appears to not contain correct labels.
+05/26/2017 04:29:26 PM - INFO - Scene MBDyn data cleared.
+`
+
+When opening a saved Blender file, `{blend_file}_{results_file}.bylog` is created in the results
+directory, and in the Text Editor Buffer.
+
+When you import a results file in an unsaved Blender file, `untitled_{results_file}.bylog`,
+in the same directory as the results file, and all the report messages are logged to it,
+along with the time of their generation.
+Upon saving the file, the `untitled_*.bylog` file is renamed to `{blend_file}_{results_file}.bylog`,
+both in the results directory and the Text Editor Buffer.
+
 
   [1]: https://www.mbdyn.org/
   [2]: https://www.blender.org/
