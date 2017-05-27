@@ -1,6 +1,8 @@
 Once installed, the add-on provides for additional panels in the Toolbar (in the
 Animation tab) and Properties panels (in the Scene, Object and Data tabs) of [Blender][2].
 
+Janga Reddy
+
 Assuming that an [MBDyn][1] simulation has been performed
 and that the output files have basename `test`, so that the standard output
 would consist in the `test.mov`, `test.log`, `test.jnt` and `test.out` files,
