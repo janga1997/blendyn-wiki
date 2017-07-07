@@ -182,11 +182,13 @@ to the Text Editor context and selecting the corresponding log file from the dro
 
 This is how the log messages look.
 
-`
+```
 06/30/2017 04:24:25 PM - WARNING - [base.py:792] - No output for nodes 1
+
 06/30/2017 04:24:25 PM - INFO - [base.py:833] - MBDyn entities imported successfully
+
 06/30/2017 04:25:44 PM - ERROR - [plotlib.py:411] - Please save current Blender file first
-`
+```
 
 The Blendyn log file is created in the directory of the MBDyn results. It has the `{anim_file}_{results_file}.bylog` name, where {anim_file} is Blender's animation filename root or "untitled" if the Blender file is unsaved and {results_file} is the root name of MBDyn's result files.
 
