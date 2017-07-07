@@ -65,8 +65,25 @@ variable from the list, and press `Delete Variable` .
 ## 6. Final Time
 If you set the final time of your simulation in your input file with a number,
 go ahead an ignore this step.
+```
+begin: initial value;
+	initial time: 0.;
+	final time: 2.;
+  .............
+```
 
-But if you set the final time with a variable, do manually set the `Final Time`
+
+But if you set the final time with a variable,
+```
+set: const real TF = 10;
+
+begin: initial value;
+	initial time: 0.;
+	final time: TF;
+  .............
+```
+
+do manually set the `Final Time`
 in Blendyn, right below the `Delete Variable` button. **Make sure that the value
 set in Blendyn is the same as that in the input file.**
 
