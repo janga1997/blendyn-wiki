@@ -32,7 +32,16 @@ the info panel will remain null.
 ## Step 2: Load the .log file
 Once the basename and the path of the simulation output files has been set by
 the selection of the `.mov` or `.nc` file, the `.log` file can be loaded by
-pressing the `Load .log file` button in the panel. An message should appear in
+pressing the `Load .log file` button in the panel. 
+
+If you remove nodes from your MBDyn simulation, re-run it, and reload the log file, a warning will appear in the header.
+38
+"Some of the nodes/elements are missing in the new .log file"
+The nodes concerned will have been treated according to the instructions given in the drop-down menu below the load log file button, with the options `Delete`, `Hide`, and `Do Nothing`
+
+The same behavior applies if you load results from a different MBDyn simulation where nodes are "missing" with respect to the previously loaded one.
+
+A message should appear in
 the [Blender][2] toolbar at the top, informing the user that all the
 [MBDyn][1] entities have been imported correctly. The number
 of nodes and number of time steps is now displayed in the panel above the `Load
@@ -137,23 +146,54 @@ will trigger the addition of keyframes and the update of the position and
 orientation of each Blender object that is associated with an
 [MBDyn][1] node or
 element, according to the simulation outputs contained in the loaded `.mov`
-file. As an option, the user can select to animate the scene only once every *n*
-timesteps, where *n* is an integer set with the "frequency" slider found after
-the button. The `Simulation time` slider shows the time of the simulation
+file.
+As an option, the user can select to animate the scene only once every *n*
+timesteps, where *n* is a number set with the "frequency" slider found just below the `Animate Scene` button.
+When *n* is not an integer, the coordinates/angles are calculated
+with a linear interpolation of the nearest timesteps.
+
+You can select the start and the end time of the animation (in seconds), thereby 
+animating only a slice of the total results. You can set them in the `Start Time` and
+`End Time` sliders, under the section "Time Range of import".
+
+The `Simulation time` slider shows the time of the simulation
 corresponding to the current animation frame. 
 
-You do not need to repeat the process every time you simulate your
-model. You can do what follows:
-* eliminate the keyframes of the current animation, by
-going to the `Dope Sheet` context area, selecting all the keyframes with the
-`A` button and pressing `X`;
-* load a new results file, with the `Load results file` button;
+You do not need to repeat the process every time you simulate the same model.
+You can follow the below steps:
+
+* load the new results file, with the `Load results file` button.
+* If you have new nodes/elements in your model, do not forget to load those new nodes/elements into
+the Blender scene (Step 4). Otherwise, just continue to the next step.
 * press the `Animate scene` button again.
 
 In the case your model has changed considerably, but you want to keep the
 Blender object in the current `.blend` file intact, you can press the `CLEAR
 MBDYN DATA` button and start from scratch. This will wipe all the data that 
 was read from the [MBDyn][1] output.
+
+## Logging
+Messages are generated in Blender's window header to give the user feedback,
+and help debug a possible problem.
+To let the user keep track of all the report messages generated, a `.bylog` file is created
+in the same directory as the results files.
+The same file is also created in the Text Editor buffer in Blender, which you can view by switching
+to the Text Editor context and selecting the corresponding log file from the drop-down menu.
+
+This is how the log messages look.
+
+```
+06/30/2017 04:24:25 PM - WARNING - [base.py:792] - No output for nodes 1
+
+06/30/2017 04:24:25 PM - INFO - [base.py:833] - MBDyn entities imported successfully
+
+06/30/2017 04:25:44 PM - ERROR - [plotlib.py:411] - Please save current Blender file first
+```
+
+The Blendyn log file is created in the directory of the MBDyn results. It has the `{anim_file}_{results_file}.bylog` name, where {anim_file} is Blender's animation filename root or "untitled" if the Blender file is unsaved and {results_file} is the root name of MBDyn's result files.
+
+All the report messages are logged to it, along with the time, type of message, and location of generation in Blendyn's codebase. Upon saving the Blender file for the first time, Blendyn's log file will be renamed according to the rules just mentioned.
+
 
   [1]: https://www.mbdyn.org/
   [2]: https://www.blender.org/
