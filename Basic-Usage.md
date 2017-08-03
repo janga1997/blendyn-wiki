@@ -7,7 +7,7 @@ would consist in the `test.mov`, `test.log`, `test.jnt` and `test.out` files,
 and the [NetCDF][3] output in the `test.nc` file, the general procedure to import
 and visualize the model are described in the following sections.
 
-# Step 1: Select the results file
+## Step 1: Select the results file
 From the left toolbar panel, located in the Animation tab of the 3D view area of
 Blender, click on the `Select results file` button and locate the `test.mov` or 
 `test.nc` file of the simulation output. The binary output is recommended, since its
@@ -29,7 +29,15 @@ displayed after the "Loaded results file" label in the panel. Please notice that
 until the `.log` file is loaded, the number of nodes and number of time steps in
 the info panel will remain null.
 
-## Step 2: Load the .log file
+
+## Step 2: Standard Import
+
+If you just want to import the [MBDyn][1] nodes and elements, and add them automatically to the scene, with standard labelling, just press the `Standard Import` button.
+
+You can skip steps **3**, **4**, **5** with this option.
+
+
+## Step 3: Load the .log file
 Once the basename and the path of the simulation output files has been set by
 the selection of the `.mov` or `.nc` file, the `.log` file can be loaded by
 pressing the `Load .log file` button in the panel. 
@@ -47,7 +55,7 @@ the [Blender][2] toolbar at the top, informing the user that all the
 of nodes and number of time steps is now displayed in the panel above the `Load
 .log file` button.
 
-## Step 3 [optional]: load labels from .log file
+## Step 4 [optional]: load labels from .log file
 The add-on will, by default, assign a standard labeling to the imported
 [MBDyn][1] entities, based on the integer labels found in
 the `.log` file. If a different labeling is desired, the add-on can parse the `.log`
@@ -80,7 +88,7 @@ all generate valid labels. Please notice, though, that at the current state the
 majority of [MBDyn][1] elements is still unsupported for automatic import in 
 [Blender][2].
 
-## Step 4: Add [MBDyn][1] nodes to the [Blender][2] scene automatically 
+## Step 5: Add [MBDyn][1] nodes and elements to the [Blender][2] scene automatically 
 ## or assign them to existing Blender objects
 Once the `.log` file has been loaded, the add-on populates two lists of
 [MBDyn][1] entities in the Properties toolbar of Blender, under the Scene tab.
@@ -88,6 +96,8 @@ Once the `.log` file has been loaded, the add-on populates two lists of
 - - - 
 ![blendyn panel in the Properties->Scene sidebar](images/properties_scene_panel.png "Addon panel in Properties->Scene sidebar")
 - - -
+
+### Add Nodes to the Scene
 
 The first list is made of the [MBDyn][1] nodes found in the
 `.log` file of model. Selecting a node in the list will update the info shown
@@ -100,6 +110,8 @@ match the initial position and orientation the node itself as found in the
 `.log` file. By default, the `Add nodes to scene button will import all the nodes
 in the list`, but its behavior can be modified by setting the first and last node
 to import, in the two sliders above the button.
+
+### Add Elements to the Scene
 
 The second list contains the elements found in the `.log` file and recognised by
 the add-on. Please notice that *this is the most experimental part of the add-on*,
@@ -139,7 +151,7 @@ will be *hooked* to those of the [MBDyn][1] nodes, so the vertices will follow t
 useful when the user wants to have more control in designing its own mesh when importing
 [MBDyn][1] results.
 
-## Step 5: Animate the Blender scene
+## Step 6: Animate the Blender scene
 Once all the nodes and the elements of interest are loaded in the Blender scene,
 pressing the `Animate scene` button in the Animation toolbar (left panel)
 will trigger the addition of keyframes and the update of the position and
