@@ -1,7 +1,7 @@
 ## 1. Set Installation Path
 
-You have to set the path of the MBDyn binaries in Blendyn, to run an 
-MBDyn simulation.
+You have to set the path of the [MBDyn][1] binaries in Blendyn, to run an 
+[MBDyn][1] simulation.
 
 On Ubuntu, open up a new terminal, and type `whereis mbdyn`, which produces
 an output of `mbdyn: /usr/local/mbdyn`. Here `/usr/local/mbdyn/bin` is the installation path.
@@ -19,7 +19,7 @@ Or you could also set the installation through the path navigator in the
 Select an input file by clicking on the `Select input file` button, and navigating
 to the input file.
 
-Note that MBDyn doesn't demand any specific extension for its input files, so all
+Note that [MBDyn][1] doesn't demand any specific extension for its input files, so all
 kinds of files are displayed.
 
 ## 3. Set Output Directory
@@ -46,7 +46,7 @@ Files` option before proceeding with the rest of the simulation.
 
 ## 5. Set Environment Variables (Optional)
 
-You can set environment variables to help with your MBDyn Simulation. A good
+You can set environment variables to help with your [MBDyn][1] Simulation. A good
 example is setting an environment variable to a parameters file, as shown below.
 
 Set the variable in the `Variable` field, and its corresponding value in the
@@ -88,7 +88,7 @@ in Blendyn, right below the `Delete Variable` button. **Make sure that the value
 set in Blendyn is the same as that in the input file.**
 
 ## 7. Run Simulation
-Go ahead and press the `Run Simulation` button to start the MBDyn Simulation.
+Go ahead and press the `Run Simulation` button to start the [MBDyn][1] Simulation.
 
 You can observe the progress of the simulation in the `Simulation Status` field,
 right above the `Run Simulation` button.
@@ -104,9 +104,14 @@ you can press the `Stop Simulation` button.
 After the completion of the simulation, the results file should be automatically
 loaded into Blendyn.
 
-If you do not have the netCDF module installed, do click on the `Always load text output`
+If you do not have the [netCDF][3] module installed, do click on the `Always load text output`
 (located just below the `Overwrite Previous Files` option). This will make sure
 you always load `*.mov` files.
 
 Go ahead and press the `Load .log file` button, and proceed with the rest of the
 animation process.
+
+
+  [1]: https://www.mbdyn.org/
+  [2]: https://www.blender.org/
+  [3]: http://www.unidata.ucar.edu/software/netcdf/
