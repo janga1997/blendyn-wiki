@@ -2,5 +2,6 @@
 * [Installation](https://github.com/zanoni-mbdyn/blendyn/wiki/Installation)
 * [Basic Usage](https://github.com/zanoni-mbdyn/blendyn/wiki/Basic-Usage)
 * [Elements Import](https://github.com/zanoni-mbdyn/blendyn/wiki/Element-Specific-Import)
+* [Running MBDyn](https://github.com/zanoni-mbdyn/blendyn/wiki/Run-Mbdyn)
 * [Plotting](https://github.com/zanoni-mbdyn/blendyn/wiki/Plotting)
 * [Tutorials](https://github.com/zanoni-mbdyn/blendyn/wiki/Tutorials)
