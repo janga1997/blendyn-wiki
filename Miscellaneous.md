@@ -3,6 +3,10 @@
 To help scale [MBDyn][1] entities easily, i.e. [Blender][2] objects associated with [MBDyn][1] nodes and elements, there is a
 `Scale [MBDyn][1] Nodes` Panel beneath the `[MBDyn][1] elements`.
 
+- - - 
+![linking a plotted image in the Image Editor](images/scaling_panel.png "Linking a plotted image in the Image Editor")
+- - -
+
 ### Scaling Nodes
  * * To scale a single node, select the node you want to scale from the displayed list.
    * Enter the value you want to scale the node to, in the field marked as `Value of Scaling`
