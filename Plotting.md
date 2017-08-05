@@ -43,11 +43,11 @@ If you plot multiple variables before switching to the Image Editor, all the
 plots images will be available in the list, as shown in the picture below
 
 - - - 
-![linking a plotted image in the Image Editor](images/plot_image_editor.png
-"Linking a plotted image in the Image Editor")
+![linking a plotted image in the Image Editor](images/plot_image_editor.png "Linking a plotted image in the Image Editor")
 - - -
+# Plotting a variable(s) belonging to the model
 
-# Plotting a variable belonging to the model
+## Plotting single variable
 Instead of selecting an object and plotting variables belonging to the
 associated [MBDyn][2] entity, you can also use the Scene Property panel shown in
 the picture below
@@ -66,8 +66,71 @@ filtered in the usual way for [Blender][5] UI lists: click on the small `+`
 button at the lower left corner of the list to bring up the filtering and
 ordering options.
 
+## Plotting multiple variables
+You can plot multiple variables in the same plot, by using the burton `Set Display Variable`.
+
+Follow the below steps:
+
+* Select a variable from the Plot Variables list, and deselect the components you do not want.
+
+* Set the name of the variable in the field `Name of variable`.
+
+* Add the plotting variable to the list by clicking on `Set the Display Vairable`.
+
+- - - 
+![plotting panel in Scene Properties
+panel](images/plot_list_variables.png "Plot panel in Scene Properties
+panel")
+- - - 
+
+* You can see the variables being added to the list, with their corresponding names.
+
+    You can also see the individual components for each variable being denoted with the set of integers `1, 2, 3`.
+
+    `[1, 2, 3] -> [x, y, z]`
+
+
+* Plot the variables in the list by pressing the button `Plot variables in List`
+
+* You can view the plot by switching to the `Image Editor`, and selecting the corresponding image. The plot is saved as `{results_file}.png`.
+
+* You can delete a variable from the list, by selecting the corresponding variable in the list, and pressing `Delete Display Variable`
+
+* To remove all variables from the list, press `Clear`
+
+## Plotting Variables in Groups
+
+You can plot variables in groups of lists, so it would be easier to generate plots iteratively.
+
+* Make a list of variables by following the steps laid out above.
+
+* Enter the name fo the group in the field `Name of Display Group`, and press the button `Set Display Group`.
+
+* You can see your group being added to a dropdown below.
+
+* To create a new group, press `Clear` to clear the variables list, and repeat the above steps to create a new group.
+
+* You can see all the groups you create being added to the dropdown below.
+
+- - - 
+![plotting panel in Scene Properties
+panel](images/plot_groups.png "Plot panel in Scene Properties
+panel")
+- - - 
+
+* To plot the variables in a group, select the group from the dropwdown list
+
+* Press the `Show Display Group` to populate the variable list with the selected group's variables.
+
+* Be sure to check the `Plot Group` checkbox as true.
+
+* Plot the variables with the `Plot Variables in List` button.
+
+* The plot will be saved as `{results_file}..{group_name}.png`. You can view it from the `Image Editor` as instructed in the previous sections.
+
   [1]: http://www.pygal.org/en/latest/
   [2]: https://www.mbdyn.org
   [3]: http://www.unidata.ucar.edu/software/netcdf/
   [4]: https://github.com/zanoni-mbdyn/blendyn/wiki/Installation
   [5]: https://www.blender.org/
+
