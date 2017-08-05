@@ -34,5 +34,43 @@ you want to scale through the dropdown `Elements to scale`.
 This selects all the [Blender][2] objects associated with that element type.
 * Scale the objects through by pressing `S`, and then just type the scaling value through the keyboard.
 
+## Text Overlay in Rendered Images
+
+This feature allows you to overlay data from the simulation over rendered animations.
+
+This is done by using the same display variables used in plotting multiple variables.
+
+This feature, like Plotting, only works with [netCDF][3] output.
+
+Follow the below steps:
+
+* Create a list of Display variables by following the steps [here](https://janga1997.github.io/abaqus/).
+
+* Add nodes and elements to the scene, and animate the scene, by following the steps [here](https://github.com/zanoni-mbdyn/blendyn/wiki/Basic-Usage)
+
+The below steps are more related to Rendering Animations in [Blender][2], and less with Blendyn.
+
+* Make sure your camera is positioned and oriented correctly in the scene.
+
+* Switch to the `Video Editing` Screen, and add the Scene to `Video Sequence Editor`.
+
+* Generate the rendered images, by pressing the `Animation` button in the `Render` tab of the `Properties` toolbar.
+    - You should see the display variables being printed onto the rendered images, for only the components you selected.
+
+Here is an example image:
+
+- - - 
+![text overlay on a rendered image](images/render_text_overlay.png "Text Overlay on a Rendered Image")
+- - -
+
+* After the Render has completed, erase the Scene strip from the Video Sequence Editor, and add an `Image` strip.
+
+* Navigate to the directory in you generated the images, and select all the images by pressing `A`.
+
+* Select a File format for the video to be saved in `Render` tab of the `Properties` toolbar.
+
+* Generate the video file by pressing `Animation` again.
+
   [1]: https://www.mbdyn.org/
   [2]: https://www.blender.org/
+  [3]: http://www.unidata.ucar.edu/software/netcdf/
