@@ -80,6 +80,9 @@ stream output: 1,
 * After completing the above steps, you can start the live animation by pressing the `P` key.
 * During the course of the simulation, the `P` key serves to pause/play the simulation.
 * You can speed up the simulation by pressing on the key `K`, and slow it down by pressing on the key `J`. This happens by increasing/decreasing the load frequency by 1.
+
+* You can see the progress of the simulation as a percentage, in the `Simulation Status Field`.
+
 * You can stop the sockets, and the MBDyn simulation at any point by just pressing the `ESC` key.
 * You can store keyframes of the simulation at the beginning, or at any point in the simulation by checking the `Set Keyframes` checkbox.
 
